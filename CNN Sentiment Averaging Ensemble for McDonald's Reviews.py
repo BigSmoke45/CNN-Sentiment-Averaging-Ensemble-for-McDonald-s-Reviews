@@ -11,7 +11,7 @@ from tensorflow.keras.callbacks import EarlyStopping
 from sklearn.metrics import accuracy_score
 
 # Завантаження даних
-data = pd.read_csv("McDonald_s_Reviews.csv", encoding='latin1')
+data = pd.read_csv("McDonald_s_Reviews.csv", encoding='latin1') #або вказати свою директорію McDonald_s_Reviews.csv
 
 # Попередня обробка даних
 data['rating'] = data['rating'].apply(lambda x: 1 if x.startswith('5') else 0)  # Позитивний: 1, Негативний: 0
